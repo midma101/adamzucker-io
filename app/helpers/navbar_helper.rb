@@ -1,4 +1,4 @@
-module NavbarModule
+module NavbarHelper
   def navbar_items
     [
       {
