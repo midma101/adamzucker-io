@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def show
-    render "show"
+    render "pages/resume"
   end
 end

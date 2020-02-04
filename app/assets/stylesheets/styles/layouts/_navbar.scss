@@ -1,0 +1,20 @@
+.navbar-container {
+    align-items: center;
+    background-color: $primary-color;
+    display: flex;
+    height: 50px;
+    left: -1px;
+    justify-content: space-around;
+    position: fixed;
+    top: -1px;
+    width: 100%;
+
+    .navbar-name {
+        align-self: flex-start;
+        width: 10%;
+    }
+
+    .navbar-item {
+        color: $secondary-color;
+    }
+}

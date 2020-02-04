@@ -4,5 +4,5 @@ Rails.application.routes.draw do
     get :resume
     get :portfolio
   end
-  get "/", action: :show, controller: 'home'
+  get "/", action: :show, controller: 'home', as: 'home'
 end

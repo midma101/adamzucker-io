@@ -2,7 +2,7 @@ import React from 'react';
 import PropsTypes from 'prop-types';
 import NavbarItem from './NavbarItem';
 
-const NavbarContainer = ({ items }) => (
+const NavbarContainer = ({ items, homePath }) => (
   <div className="navbar-container">
     {items.map(item => (<NavbarItem item={item} />))}
   </div>
