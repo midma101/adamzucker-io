@@ -9,4 +9,28 @@
   &.jc-space-around {
     justify-content: space-around;
   }
+
+  &.jc-flex-start {
+    justify-content: flex-start;
+  }
+
+  &.jc-center {
+    justify-content: center;
+  }
+
+  &.flex-wrap {
+    flex-wrap: wrap;
+  }
+}
+
+.text-small {
+  font-size: 10px;
+}
+
+.text-medium {
+  font-size:  18px;
+}
+
+.text-large {
+  font-size: 24px;
 }

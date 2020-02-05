@@ -1,0 +1,25 @@
+.animation-root {
+  overflow: hidden;
+  height: 100%;
+  width: 5%;
+  position: fixed;
+
+  &.right {
+    right: 0;
+  }
+}
+
+.animation-container {
+  left: 0px;
+  top: -100px;
+  height: calc(100vh + 100px);
+  overflow: hidden;
+  position: relative;
+}
+
+.gutter-animation {
+  margin: 0 auto;
+  width: 20px;
+  overflow: visible;
+  position: relative;
+}

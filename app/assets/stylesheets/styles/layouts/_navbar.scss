@@ -1,20 +1,54 @@
 .navbar-container {
     align-items: center;
-    background-color: $primary-color;
+    background-color: $background-color;
     display: flex;
+    font-family: $font-family-heading;
     height: 50px;
-    left: -1px;
     justify-content: space-around;
-    position: fixed;
-    top: -1px;
     width: 100%;
 
-    .navbar-name {
-        align-self: flex-start;
-        width: 10%;
+
+    .navbar-hamburger-icon {
+        display: none;
+    }
+
+    @media screen and (max-width: $screen-size-sm) {
+        .navbar-item:not(:first-child) {
+            display: none;
+        }
+
+        .navbar-hamburger-icon {
+            color: $text-active-color;
+            display: block;
+            font-size: 24px;
+        }
     }
 
     .navbar-item {
-        color: $secondary-color;
+        padding: $spacing-xs;
+
+        &:first-child:hover {
+            animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+            perspective: 1000px;
+        }
+
+        &.navbar-item--name {
+            font-size: 20px;
+            width: 70%;
+        }
+
+        &.navbar-icons--item {
+            color: $color-white-transparent;
+        }
+
+        &.active {
+            border-bottom: 1px solid white;
+        }
     }
+}
+
+.mobile-menu-container {
+    margin: auto;
 }

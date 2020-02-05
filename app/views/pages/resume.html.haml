@@ -1,7 +1,47 @@
 .page
   .page__content
-    %div
-      Full Stack Engineer with 7+ years experience. Committed to clean code, best
-      testing practices, and leading by example. Most recently been developing on a
-      Rails/React stack, but comfortable working with many other languages and frameworks
-      including but not limited to Python (Django/Flask), Node, and Angular.
+    .resume
+      .flex-row.jc-space-between.flex-wrap
+        .resume__bio-info
+          %span
+            Hey! I'm Adam, a Senior Full Stack Engineer with 8+ years experience. Committed to efficient applications, clean
+            code, and leading by example.
+        .headshot
+          = image_tag("headshot.jpg")
+      .resume__work-container
+        %h2
+          Work
+        .resume__work-info
+          .flex-row.jc-space-between
+            .resume__job-title
+              %p
+                Dia&Co
+            .resume__job-description
+              %p
+                Senior Full Stack Software Engineer // Aug 2018 - Jan 2020
+              %p
+                Built and maintained an in house e-commerce solution
+                using Rails, React, and Elasticsearch // Developed a library of React components and
+                stylesheets to facilitate consistency of designs across site // Created deployment pipelines for several
+                microservices using CircleCI, Docker, Terraform, and AWS
+          .flex-row.jc-space-between
+            .resume__job-title
+              %p
+                WeWork
+            .resume__job-description
+              %p
+                Full Stack Software Engineer, Level 2 // Mar 2017 - June 2018
+              %p
+                Spearheaded development on Ruby on Rails microservice API for booking conference rooms // Improved
+                performance of conference room booking API, reducing end user load time by over 50%
+          .flex-row.jc-space-between
+            .resume__job-title
+              %p
+                Schrodinger
+            .resume__job-description
+              %p
+                Software Engineer // Nov 2015 - Jan 2017
+              %p
+                Designed and implemented APIs in Java for integration between the front end and database, with a
+                focus on scalability // Integrated core enterprise software with a specialized database to provide
+                3D annotations for a molecule

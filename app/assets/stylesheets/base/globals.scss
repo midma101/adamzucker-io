@@ -1,6 +1,73 @@
-$primary-color: #fffff0;
-$secondary-color: #00688B;
+$background-color: black;
+$text-active-color: white;
+$text-inactive-color: gray;
+$modal-background-color: rgba(0, 0, 0, 0.3);
+$color-white-transparent: rgba(255, 255, 255, 0.9);
+$font-family-body: "Lato";
+$font-family-heading: "Montserrat";
+
+$gutter-spacing: 15px;
+$spacing-xs: 5px;
+$spacing-sm: 15px;
+$spacing-md: 30px;
+$spacing-lg: 60px;
+$spacing-xl: 90px;
+
+$screen-size-sm: 768px;
+$screen-size-md: 950px;
 
 body {
-  background-color: $secondary-color;
+  background-color: $background-color;
+  line-height: 1.5;
+}
+
+a {
+  color: $text-active-color;
+  text-decoration: none;
+}
+
+svg {
+  fill: $color-white-transparent;
+}
+
+h1, h2, h3, {
+  font-family: $font-family-heading;
+}
+
+div, span, p {
+  font-family: $font-family-body;
+}
+
+h2 {
+  font-size: 28px;
+
+  @media(max-width: $screen-size-sm) {
+    font-size: 20px;
+  }
+}
+
+h3 {
+  font-size: 20px;
+
+  @media(max-width: $screen-size-sm) {
+    font-size: 18px;
+  }
+}
+
+@keyframes shake {
+  10% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50% {
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  40%{
+    transform: translate3d(3px, 0, 0);
+  }
 }

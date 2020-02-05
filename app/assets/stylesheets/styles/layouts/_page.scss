@@ -1,0 +1,41 @@
+.page {
+  .page__content {
+    color: $text-active-color;
+    padding-top: 50px;
+
+    .headshot img {
+      max-height: 210px;
+    }
+  }
+}
+
+.resume {
+  margin: $spacing-md 0;
+
+  .resume__work-container {
+    font-family: $font-family-heading;
+    font-weight: 700;
+    margin-top: $spacing-xl;
+  }
+
+  .resume__bio-info {
+    font-family: $font-family-heading;
+    font-size: 28px;
+    font-weight: 700;
+    padding-bottom: $spacing-md;
+    padding-right: $spacing-md;
+    width: 55%;
+
+    @media(max-width: $screen-size-md) {
+      flex-grow: 1;
+    }
+  }
+
+  .resume__work-info {
+    font-family: $font-family-body;
+  }
+
+  .resume__job-description {
+    width: 60%;
+  }
+}

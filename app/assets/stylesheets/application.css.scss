@@ -13,8 +13,12 @@
  *= require_self
  */
 
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Lato|Nanum+Gothic|Noto+Sans|Arimo:700|Montserrat:700|Roboto:400,700|Noto+Sans+TC:400,700&display=swap');
 @import "base/globals";
 @import "base/mixins";
 @import "base/utilities";
+@import "base/container";
+@import "base/modal";
 @import "styles/layouts/navbar";
 @import "styles/layouts/page";
+@import "styles/layouts/animation";

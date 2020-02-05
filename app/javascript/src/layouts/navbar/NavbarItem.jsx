@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const NavbarItem = ({ item }) => (
-  <div className="navbar-item">
+  <div className={`navbar-item navbar-item--item ${item.active && 'active'} `}>
     <a href={item.path}>{item.name}</a>
   </div>
 );
