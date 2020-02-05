@@ -4,30 +4,30 @@
       .flexbox.fd-row.jc-space-around.padding-bottom-lg
         .text-center
           .portfolio__gif
-            .port-animation-root
-              .port-animation-container
-                #adamzucker-example-container
-          %p
-            adamzucker.io // personal website
-        .text-center
-          .portfolio__gif
-            %a{ :href => "https://github.com/midma101/adamzucker-io" }
-              =image_tag("gif/adamzucker_io_code.gif")
+            %a{ :href => "/" }
+              .port-animation-root
+                .flexbox.fd-column.jc-center.ai-center.height-100.text-large.transparent
+                  %span
+                    adamzucker.io
+                .port-animation-container
+                  #adamzucker-example-container
+      .text-center
+        .portfolio__gif
+          %a{ :href => "https://github.com/midma101/adamzucker-io" }
+            -# =image_tag("gif/adamzucker_io_code.gif")
             %p
-              ^^^checkout the code^^^
+              >>>checkout the code<<<
       .flexbox.fd-row.jc-space-around
         .text-center
           .portfolio__gif
             #shorty-example-container
               =image_tag("gif/shorty_ex.gif")
-          %p
-            shorty // url shortener
-        .text-center
-          .portfolio__gif
-            %a{ :href => "https://github.com/midma101/shorty_code" }
-              =image_tag("gif/shorty_code.gif")
+      .text-center
+        .portfolio__gif
+          %a{ :href => "https://github.com/midma101/shorty" }
+            -# =image_tag("gif/shorty_code.gif")
             %p
-              ^^^checkout the code^^^
+              >>>checkout the code<<
 
 :javascript
   class GutterAnimation {
