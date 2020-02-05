@@ -7,8 +7,10 @@ const NavbarMobileModal = ({ show, onHide, icons, items }) => {
   return (
     <Modal isShowing={show} hide={onHide}>
       <div className="mobile-menu-container">
-        {items.map(item => (<div className="font-size-medium"><NavbarItem item={item} /></div>))}
-        <div className="flex-row jc-space-around">
+        <div className="font-size-medium flexbox fd-column ai-center">
+          {items.map(item => (<NavbarItem item={item} />))}
+        </div>
+        <div className="mobile-icons flexbox fd-row jc-space-around">
           {icons.map(icon => (<NavbarIcon icon={icon} />))}
         </div>
       </div>

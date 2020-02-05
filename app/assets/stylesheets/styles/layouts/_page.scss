@@ -39,3 +39,10 @@
     width: 60%;
   }
 }
+
+.portfolio {
+  .portfolio__gif img {
+    border-radius: 2px;
+    max-height: 160px;
+  }
+}

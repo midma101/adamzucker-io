@@ -15,10 +15,15 @@ $spacing-xl: 90px;
 
 $screen-size-sm: 768px;
 $screen-size-md: 950px;
+$max-container-width: 1000px;
 
 body {
   background-color: $background-color;
   line-height: 1.5;
+
+  &.modal-open {
+    overflow: hidden;
+  }
 }
 
 a {

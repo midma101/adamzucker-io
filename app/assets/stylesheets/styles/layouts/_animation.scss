@@ -23,3 +23,16 @@
   overflow: visible;
   position: relative;
 }
+
+.port-animation-root {
+  overflow: hidden;
+  height: 160px;
+  width: 320px;
+  //position: fixed;
+}
+
+.port-animation-container {
+  top: -150px;
+  height: 100%;
+  position: relative;
+}

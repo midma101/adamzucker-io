@@ -1,6 +1,13 @@
-.flex-row {
+.flexbox {
   display: flex;
-  flex-direction: row;
+
+  &.fd-row {
+    flex-direction: row;
+  }
+
+  &.fd-column {
+    flex-direction: column;
+  }
 
   &.jc-space-between {
     justify-content: space-between;
@@ -16,6 +23,10 @@
 
   &.jc-center {
     justify-content: center;
+  }
+
+  &.ai-center {
+    align-items: center;
   }
 
   &.flex-wrap {
@@ -34,3 +45,20 @@
 .text-large {
   font-size: 24px;
 }
+
+.padding-bottom-sm {
+  padding-bottom-sm: $spacing-sm;
+}
+
+.padding-bottom-md {
+  padding-bottom: $spacing-md;
+}
+
+.padding-bottom-lg {
+  padding-bottom: $spacing-lg;
+}
+
+.text-center {
+  text-align: center;
+}
+

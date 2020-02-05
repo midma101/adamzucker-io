@@ -50,5 +50,14 @@
 }
 
 .mobile-menu-container {
-    margin: auto;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .mobile-icons {
+        margin: auto;
+        padding-top: $spacing-sm;
+        width: 150px;
+    }
 }
