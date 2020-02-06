@@ -23,6 +23,10 @@
       #right-gutter-animation.gutter-animation
   .main-container
     = render :partial => "layouts/navbar"
+    %p.notice
+      = notice
+    %p.alert
+      = notice
     = yield
 
 :javascript

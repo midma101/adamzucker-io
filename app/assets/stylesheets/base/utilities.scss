@@ -5,6 +5,12 @@
     flex-direction: row;
   }
 
+  &.fd-column--mobile {
+    @media(max-width: $screen-size-sm) {
+      flex-direction: column;
+    }
+  }
+
   &.fd-column {
     flex-direction: column;
   }
@@ -56,6 +62,18 @@
 
 .padding-bottom-lg {
   padding-bottom: $spacing-lg;
+}
+
+.padding-vertical-sm {
+  padding: $spacing-sm 0;
+}
+
+.padding-vertical-md {
+  padding: $spacing-md 0;
+}
+
+.padding-vertical-lg {
+  padding: $spacing-lg 0;
 }
 
 .text-center {

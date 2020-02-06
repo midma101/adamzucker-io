@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :users
+  root :to => 'home#show'
+  get "/", action: :show, controller: 'home', as: 'home'
+  
   scope module: 'pages', path: '/' do
     get :misc
     get :resume
     get :portfolio
   end
-  get "/", action: :show, controller: 'home', as: 'home'
 end
