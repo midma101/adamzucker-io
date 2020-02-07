@@ -4,7 +4,7 @@
     display: flex;
     font-family: $font-family-heading;
     height: 50px;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
 
 
@@ -50,6 +50,10 @@
 }
 
 .mobile-menu-container {
+    a {
+        font-size: 24px;
+    }
+
     position: absolute;
     top: 35%;
     left: 50%;

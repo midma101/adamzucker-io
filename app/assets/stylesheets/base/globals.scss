@@ -23,6 +23,7 @@ $max-container-width: 1000px;
 body {
   background-color: $background-color;
   line-height: 1.5;
+  margin: 0;
 
   &.modal-open {
     overflow: hidden;

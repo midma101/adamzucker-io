@@ -1,8 +1,9 @@
 .animation-root {
-  overflow: hidden;
   height: 100%;
-  width: 5%;
+  overflow: hidden;
   position: fixed;
+  transform: rotate(180deg);
+  width: 10%;
 
   &.right {
     right: 0;
@@ -12,7 +13,7 @@
 .animation-container {
   left: 0px;
   top: -100px;
-  height: calc(100vh + 100px);
+  height: calc(100vh + 300px);
   overflow: hidden;
   position: relative;
 }
@@ -25,14 +26,14 @@
 }
 
 .port-animation-root {
+  border: 1px solid white;
   overflow: hidden;
   height: 160px;
   width: 320px;
-  //position: fixed;
 }
 
 .port-animation-container {
-  top: -150px;
+  top: -255px;
   height: 100%;
   position: relative;
 }

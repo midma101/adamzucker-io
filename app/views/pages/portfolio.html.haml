@@ -1,7 +1,7 @@
 .page
   .page__content
     .portfolio.flexbox.fd-column
-      .flexbox.fd-row.jc-space-around.padding-bottom-lg
+      .flexbox.fd-row.jc-space-around.padding-bottom-sm
         .text-center
           .portfolio__gif
             %a{ :href => "/" }
@@ -15,55 +15,73 @@
         .portfolio__gif
           %a{ :href => "https://github.com/midma101/adamzucker-io" }
             -# =image_tag("gif/adamzucker_io_code.gif")
-            %p
+            %span
               >>>checkout the code<<<
       .text-center.padding-vertical-md
         ="// // //"
-      .flexbox.fd-row.jc-space-around
+      .flexbox.fd-row.jc-space-around.padding-bottom-sm
         .text-center
           .portfolio__gif
-            #shorty-example-container
+            %a#shorty-example-container
               =image_tag("gif/shorty_ex.gif")
       .text-center
         .portfolio__gif
           %a{ :href => "https://github.com/midma101/shorty" }
-            -# =image_tag("gif/shorty_code.gif")
-            %p
-              >>>checkout the code<<
+            %span
+              >>>checkout the code<<<
 
 :javascript
-  class GutterAnimation {
-    constructor(elementId) {
-      this.elementId = elementId;
-    }
-  }
-  const rightGutter = document.getElementById('adamzucker-example-container');
-  var emojis = ['🌽', '🍇', '🍌', '🍒', '🍕', '🍷', '🍭', '💖', '💩', '🐷', '🐸', '🐳', '🎃', '🎾', '🌈', '🍦', '💁', '🔥', '😁', '😱', '🌴', '👏', '💃']
-  var circles = [];
+  var end = Date.now() + (5 * 1000);
 
-  const getRandomEmoji = () => emojis[Math.floor((Math.random() * emojis.length))];
+  // go Buckeyes!
+  var colors = ['#bb0000', '#ffffff'];
+  document.getElementById('shorty-example-container').onclick = frame;
+
+  console.log("cool story");
+  function frame() {
+    confetti({
+      particleCount: 100,
+      startVelocity: 30,
+      spread: 360,
+      origin: {
+        x: Math.random(),
+        // since they fall down, start a bit higher than random
+        y: Math.random() - 0.2
+      }
+    });
+    // if (Date.now() < end) {
+    //   requestAnimationFrame(frame);
+    // }
+  };
+
+:javascript
+  const exampleContainer = document.getElementById('adamzucker-example-container');
+  var exampleEmojis = ['🌽', '🍇', '🍌', '🍒', '🍕', '🍷', '🍭', '💖', '💩', '🐷', '🐸', '🐳', '🎃', '🎾', '🌈', '🍦', '💁', '🔥', '😁', '😱', '🌴', '👏', '💃']
+  var exampleObjects = [];
+
+  const getRandomEmoji = () => exampleEmojis[Math.floor((Math.random() * exampleEmojis.length))];
 
   for (var i = 0; i < 15; i++) {
-    addCircle(i * 150, [10, 300], getRandomEmoji());
-    addCircle(i * 150, [10, -300], getRandomEmoji());
-    addCircle(i * 150, [10 - 200, -300], getRandomEmoji());
-    addCircle(i * 150, [10 + 200, 300], getRandomEmoji());
-    addCircle(i * 150, [10 - 400, -300], getRandomEmoji());
-    addCircle(i * 150, [10 + 400, 300], getRandomEmoji());
-    addCircle(i * 150, [10 - 600, -300], getRandomEmoji());
-    addCircle(i * 150, [10 + 600, 300], getRandomEmoji());
+    addExampleObject(i * 150, [10, 300], getRandomEmoji());
+    addExampleObject(i * 150, [10, -300], getRandomEmoji());
+    addExampleObject(i * 150, [10 - 200, -300], getRandomEmoji());
+    addExampleObject(i * 150, [10 + 200, 300], getRandomEmoji());
+    addExampleObject(i * 150, [10 - 400, -300], getRandomEmoji());
+    addExampleObject(i * 150, [10 + 400, 300], getRandomEmoji());
+    addExampleObject(i * 150, [10 - 600, -300], getRandomEmoji());
+    addExampleObject(i * 150, [10 + 600, 300], getRandomEmoji());
   }
 
-  function addCircle(delay, range, color) {
+  function addExampleObject(delay, range, color) {
     setTimeout(function() {
-      var c = new Circle(range[0] + Math.random() * range[1], 80 + Math.random() * 4, color, {
+      var c = new ExampleObject(range[0] + Math.random() * range[1], 80 + Math.random() * 4, color, {
         x: -0.15 + Math.random() * 0.3,
         y: 1 + Math.random() * 1
       }, range);
-      circles.push(c);
+      exampleObjects.push(c);
     }, delay);
   }
-  function Circle(x, y, c, v, range) {
+  function ExampleObject(x, y, c, v, range) {
     var _this = this;
     this.x = x;
     this.y = y;
@@ -77,9 +95,9 @@
     this.element.style.fontSize = '26px';
     this.element.style.color = 'hsl('+(Math.random()*360|0)+',80%,50%)';
     this.element.innerHTML = c;
-    rightGutter.appendChild(this.element);
+    exampleContainer.appendChild(this.element);
 
-    this.update = function() {
+    this.updateExampleObject = function() {
       if (_this.y > 800) {
         _this.y = 80 + Math.random() * 4;
         _this.x = _this.range[0] + Math.random() * _this.range[1];
@@ -93,11 +111,11 @@
     };
   }
 
-  function animate() {
-    for (var i in circles) {
-      circles[i].update();
+  function animateExample() {
+    for (var i in exampleObjects) {
+      exampleObjects[i].updateExampleObject();
     }
-    requestAnimationFrame(animate);
+    requestAnimationFrame(animateExample);
   }
 
-  animate();
+  animateExample();
