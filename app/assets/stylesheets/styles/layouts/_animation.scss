@@ -29,7 +29,8 @@
   border: 1px solid white;
   overflow: hidden;
   height: 160px;
-  width: 320px;
+  max-width: 320px;
+  min-width: 240px;
 }
 
 .port-animation-container {
