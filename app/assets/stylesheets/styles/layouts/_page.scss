@@ -55,6 +55,20 @@
 .portfolio {
   .portfolio__gif img {
     border-radius: 2px;
-    max-height: 160px;
+    max-width: 320px;
+  }
+
+
+  .port-animation-root {
+    border: 1px solid white;
+    overflow: hidden;
+    height: 160px;
+    max-width: 320px;
+  }
+
+  .port-animation-container {
+    top: -255px;
+    height: 100%;
+    position: relative;
   }
 }
