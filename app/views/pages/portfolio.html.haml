@@ -13,7 +13,7 @@
                   #adamzucker-example-container
       .text-center
         .portfolio__gif
-          %a{ :href => "https://github.com/midma101/adamzucker-io" }
+          %a{ :href => "https://github.com/midma101/adamzucker-io", :target => '_blank' }
             -# =image_tag("gif/adamzucker_io_code.gif")
             %span
               >>>checkout the code<<<
@@ -21,37 +21,20 @@
         ="// // //"
       .flexbox.fd-row.jc-space-around.padding-bottom-sm
         .text-center
-          .portfolio__gif
-            %a#shorty-example-container
+          .portfolio__gif#shorty-example-container
+            %a
               =image_tag("gif/shorty_ex.gif")
       .text-center
         .portfolio__gif
-          %a{ :href => "https://github.com/midma101/shorty" }
+          %a{ :href => "https://github.com/midma101/shorty", :target => '_blank' }
             %span
               >>>checkout the code<<<
 
 :javascript
-  var end = Date.now() + (5 * 1000);
-
-  // go Buckeyes!
-  var colors = ['#bb0000', '#ffffff'];
-  document.getElementById('shorty-example-container').onclick = frame;
-
-  console.log("cool story");
-  function frame() {
-    confetti({
-      particleCount: 100,
-      startVelocity: 30,
-      spread: 360,
-      origin: {
-        x: Math.random(),
-        // since they fall down, start a bit higher than random
-        y: Math.random() - 0.2
-      }
-    });
-    // if (Date.now() < end) {
-    //   requestAnimationFrame(frame);
-    // }
+  const shortyExampleContainer = document.getElementById('shorty-example-container');
+  shortyExampleContainer.onclick = () => {
+    shortyExampleContainer.style.animation = 'spin 3s ease-in-out';
+    setTimeout(() => shortyExampleContainer.style.animation =  '', 3100);
   };
 
 :javascript

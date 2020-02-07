@@ -5,7 +5,6 @@
 
 // require("@rails/ujs").start();
 // require("@rails/activestorage").start();
-//= require canvas-confetti/dist
 //
 // import "src/layouts/navbar"
 //
