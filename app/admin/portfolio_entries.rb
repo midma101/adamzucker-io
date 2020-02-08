@@ -5,7 +5,7 @@ ActiveAdmin.register PortfolioEntry do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :name, :github_link, :example_type, :example_image
+  permit_params :name, :code_url, :example_type, :example_image, :show_order, :animation_name, :project_url, :active
   #
   # or
   #
@@ -17,9 +17,13 @@ ActiveAdmin.register PortfolioEntry do
   #
   form do |f|
     input :name
-    input :github_link
+    input :code_url
     input :example_type
     input :example_image, as: :file
+    input :show_order
+    input :animation_name
+    input :active
+    input :project_url
 
     actions
   end

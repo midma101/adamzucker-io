@@ -1,13 +1,13 @@
 .flexbox.fd-row.jc-space-around.padding-bottom-sm
   .portfolio__gif.text-center
-    %a{ :href => "/" }
+    %a{ :href => entry.project_url }
       .port-animation-root
         .flexbox.fd-column.jc-center.ai-center.height-100.text-large.transparent
           %span
-            adamzucker.io
+            = entry.name
         .port-animation-container
-          #adamzucker-example-container
+          %div{ id: entry.animation_name }
 .text-center
-  %a{ :href => "https://github.com/midma101/adamzucker-io", :target => '_blank' }
+  %a{ :href => entry.code_url, :target => '_blank' }
     %span
       >>>checkout the code<<<

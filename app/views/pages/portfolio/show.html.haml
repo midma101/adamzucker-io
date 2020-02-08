@@ -4,9 +4,11 @@
 .page
   .page__content
     .portfolio.flexbox.fd-column
-      = render 'pages/portfolio/entries/animation'
       - @entries.each do |entry|
-        = render partial: "pages/portfolio/entries/gif", locals: { entry: entry }
+        - if entry.example_type == 'animation'
+          = render partial: "pages/portfolio/entries/animation", locals: { entry: entry }
+        - else
+          = render partial: "pages/portfolio/entries/gif", locals: { entry: entry }
 
 
 :javascript

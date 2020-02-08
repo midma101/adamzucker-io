@@ -3,10 +3,7 @@ class PagesController < ApplicationController
   end
 
   def portfolio
-    @entries = PortfolioEntry.
-      joins(:example_image_attachment).
-      group(:id).
-      having("COUNT(active_storage_attachments) > 0")
+    @entries = PortfolioEntry.where(active: true).order(:show_order)
 
     render "pages/portfolio/show"
   end
