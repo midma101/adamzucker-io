@@ -1,0 +1,19 @@
+:ruby
+  title "Portfolio | Adam Zucker"
+
+.page
+  .page__content
+    .portfolio.flexbox.fd-column
+      = render 'pages/portfolio/entries/animation'
+      - @entries.each do |entry|
+        = render partial: "pages/portfolio/entries/gif", locals: { entry: entry }
+
+
+:javascript
+  const shortyExampleContainer = document.getElementById('shorty-example-container');
+  shortyExampleContainer.onclick = () => {
+    shortyExampleContainer.style.animation = 'spin 3s ease-in-out';
+    setTimeout(() => shortyExampleContainer.style.animation =  '', 3100);
+  };
+
+  window.emoji = '⚡';

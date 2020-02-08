@@ -1,0 +1,11 @@
+.text-center.padding-vertical-md
+  ="// // //"
+  .flexbox.fd-row.jc-space-around.padding-bottom-sm
+    .text-center{ id: "#{entry.name}-example-container" }
+      .portfolio__gif
+        %a
+          =image_tag((url_for(entry.example_image)))
+  .text-center
+    %a{ :href => entry.github_link, :target => '_blank' }
+      %span
+        >>>checkout the code<<<

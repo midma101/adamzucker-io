@@ -5,7 +5,7 @@ ActiveAdmin.register PortfolioEntry do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  # permit_params :name, :github_link, :example_type
+  permit_params :name, :github_link, :example_type, :example_image
   #
   # or
   #
@@ -14,4 +14,13 @@ ActiveAdmin.register PortfolioEntry do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
+  #
+  form do |f|
+    input :name
+    input :github_link
+    input :example_type
+    input :example_image, as: :file
+
+    actions
+  end
 end

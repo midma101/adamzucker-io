@@ -1,3 +1,5 @@
+$card-border-radius: 3px;
+
 .page {
   .page__content {
     color: $text-active-color;
@@ -53,22 +55,27 @@
 }
 
 .portfolio {
-  .portfolio__gif img {
-    border-radius: 2px;
-    max-width: 280px;
-  }
+  .portfolio__gif {
+    img, .port-animation-root {
+      border-radius: $card-border-radius;
+      box-shadow: 0 0 3px whitesmoke;
+    }
 
+    img {
+      max-width: 280px;
+    }
 
-  .port-animation-root {
-    border: 1px solid white;
-    overflow: hidden;
-    height: 180px;
-    width: 280px;
-  }
+    .port-animation-root {
+      border: 1px solid white;
+      overflow: hidden;
+      height: 180px;
+      width: 280px;
+    }
 
-  .port-animation-container {
-    top: -255px;
-    height: 100%;
-    position: relative;
+    .port-animation-container {
+      top: -255px;
+      height: 100%;
+      position: relative;
+    }
   }
 }
