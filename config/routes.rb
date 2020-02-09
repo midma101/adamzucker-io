@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   get "/", action: :show, controller: 'home', as: 'home'
   
   scope module: 'pages', path: '/' do
-    get :misc
     get :resume
     get :portfolio
   end
