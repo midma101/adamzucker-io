@@ -1,6 +1,6 @@
 .modal-overlay {
   position: fixed;
-  top: 50px;
+  top: $navbar-height;
   left: 0;
   z-index: 1040;
   width: 100%;
@@ -10,7 +10,7 @@
 
 .modal-wrapper {
   position: fixed;
-  top: 50px;
+  top: $navbar-height;
   left: 0;
   z-index: 1050;
   width: 100%;

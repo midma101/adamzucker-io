@@ -3,7 +3,7 @@ $card-border-radius: 3px;
 .page {
   .page__content {
     color: $text-active-color;
-    padding-top: 50px;
+    padding-top: $navbar-height;
 
     .headshot img {
       max-height: 210px;
