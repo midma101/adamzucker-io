@@ -14,6 +14,7 @@ gem 'meta-tags'
 gem 'pg'
 gem 'puma', '~> 4.1'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
+gem 'rspec'
 gem 'sass-rails', '>= 6'
 gem "sitemap_generator"
 gem 'webpacker', '~> 4.0'
@@ -24,6 +25,8 @@ gem 'webpacker-react', "~> 1.0.0.beta.1"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem "factory_bot_rails"
+  gem 'rspec-rails'
 end
 
 group :development do
