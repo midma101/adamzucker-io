@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   scope module: 'pages', path: '/' do
     get :resume
     get :portfolio
+    get :synth
   end
 end

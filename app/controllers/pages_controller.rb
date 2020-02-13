@@ -8,6 +8,6 @@ class PagesController < ApplicationController
     render "pages/portfolio/show"
   end
 
-  def misc
+  def synth
   end
 end

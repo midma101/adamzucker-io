@@ -1,9 +1,12 @@
 :ruby
+
   props = {
     items: navbar_items,
     icons: navbar_icons,
     homePath: home_path
   }
+
+= javascript_pack_tag 'navbar'
 = react_component('NavbarContainer', props)
 
 

@@ -6,14 +6,18 @@ const exampleObjects = [];
 let exampleContainer, leftGutter, rightGutter;
 const getRandomEmoji = () => exampleEmojis[Math.floor((Math.random() * exampleEmojis.length))];
 
-export function initializeAnimation() {
-  exampleContainer = document.getElementById('adamzucker-example-container');
+export function initializeGutterAnimation() {
   leftGutter = document.getElementById('left-gutter-animation');
   rightGutter = document.getElementById('right-gutter-animation');
 
-  addObjects(getRandomEmoji(), exampleContainer, exampleObjects, true);
   addObjects(emoji, leftGutter, leftCircles);
   addObjects(emoji, rightGutter, rightCircles)
+}
+
+export function initializeExampleAnimation() {
+  exampleContainer = document.getElementById('adamzucker-example-container');
+
+  addObjects(getRandomEmoji(), exampleContainer, exampleObjects, true);
 }
 
 function addObjects(emoji, container, objects, random = false) {
