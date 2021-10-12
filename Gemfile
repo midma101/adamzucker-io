@@ -12,7 +12,7 @@ gem "haml-rails", "~> 2.0"
 gem 'jbuilder', '~> 2.7'
 gem 'meta-tags'
 gem 'pg'
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 4.3'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 gem 'rspec'
 gem 'sass-rails', '>= 6'
